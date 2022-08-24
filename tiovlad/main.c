@@ -25,8 +25,7 @@ void Insere(int ** caminho, int qnt_vertices){
     }
 }
 
-
-
+//Descobre a menor aresta do adjacente
 guiaStruct MenorAresta(int **vertice, int*visitados, int qnt_vertices, int ind){
     int i, j, contador = 0;
     guiaStruct menor, menor2;
@@ -43,6 +42,7 @@ guiaStruct MenorAresta(int **vertice, int*visitados, int qnt_vertices, int ind){
     return menor;
 }
 
+//Descobre o menor caminho
 void MenorCaminho(int qnt_vertices, int ** sistema_rodoviario, int**caminho, int*visitados, int origem){
     int i, j = 0, peso = 0, keep, l;
     guiaStruct menor;
@@ -98,6 +98,8 @@ void MenorCaminho(int qnt_vertices, int ** sistema_rodoviario, int**caminho, int
         origem = menor.vertice;      
     }
 }
+
+//Função em andamento
 void ImprimePercurso(int destino, int origem, int**sistema_rodoviario, int**caminho, int qnt_vertices){
     int i, j=0, dist, dif, keep;
     int *temp =(int *)calloc(qnt_vertices, sizeof(int));
@@ -175,6 +177,8 @@ void GrafoTeste(int qnt_vertices, int**sistema_rodoviario){
    
 }
 
+
+//main
 int main(int argc, char *argv[]){
 
     //variáveis absolutas(raramente tem seu valor alterado)
@@ -227,6 +231,7 @@ int main(int argc, char *argv[]){
             j++;
         }
     }
+    
     if(j == qnt_vertices){
         printf("Ao que parece vladimir mora em um local onde nao hah um sistema rodoviario\n");
     }else{
