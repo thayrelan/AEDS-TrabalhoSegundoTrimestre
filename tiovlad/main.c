@@ -4,9 +4,9 @@
 #include "graph.h"
 
 
-#define TOTAL 5
-#define COMECO 0
-#define FIM 4
+#define TOTAL 8
+#define COMECO 2
+#define FIM 7
 #define BOLSAS_SANGUE 100000
 
 
@@ -196,23 +196,31 @@ int main(int argc, char *argv[]){
         caminho[i] = (int*) calloc (qnt_vertices, sizeof(int));
     }
 
-    printf("3x4 DO VLADIMIR: \n");
-    printf("⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠟⠛⠛⠛⠛⠛⠿⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿\n");
-    printf("⣿⣿⣿⣿⣿⣿⡿⠋⣡⣤⣶⣶⣶⣶⣆⣰⣶⣶⣶⣶⣤⣌⠛⢿⣿⣿⣿⣿⣿⣿\n");
-    printf("⣿⣿⣿⣿⣿⣿⠁⠈⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⠁⠈⣿⣿⣿⣿⣿⣿\n");
-    printf("⣿⣿⣿⣿⣿⡿⠀⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⢿⣿⣿⣿⣿⣿\n");
-    printf("⣿⣿⣿⣿⣿⡇⠀⣿⡿⠋⠉⠉⠙⠻⠿⠿⠟⠋⠉⠉⠙⢿⣿⠀⢸⣿⣿⣿⣿⣿\n");
-    printf("⣿⣿⣿⡟⠻⢿⣴⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣦⡿⠟⢻⣿⣿⣿\n");
-    printf("⣿⣿⣿⣷⠀⠀⣿⠁⢀⣴⣷⣄⠀⠀⠀⠀⠀⠀⣠⣾⣦⡀⠈⣿⠀⠀⣾⣿⣿⣿\n");
-    printf("⣿⣿⣿⣿⡀⠀⣿⠀⠙⢋⣤⣿⣷⣄⠀⠀⣠⣾⣿⣤⡙⠋⠀⣿⠀⢀⣿⣿⣿⣿\n");
-    printf("⣿⣿⣿⣿⣷⣄⣿⠀⠰⠿⠇⠀⠿⠿⠁⠈⠿⠿⠀⠸⠿⠆⠀⣿⣠⣾⣿⣿⣿⣿\n");
-    printf("⣿⣿⣿⣿⣿⣿⡿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⢿⣿⣿⣿⣿⣿⣿\n");
-    printf("⣿⣿⡿⠟⠋⠁⠀⠈⠻⣦⠀⠀⠀⠻⢶⡶⠟⠀⠀⠀⣴⠟⠁⠀⠈⠙⠻⢿⣿⣿\n");
-    printf("⣿⣷⣦⣄⡀⠀⠀⠀⠀⣿⠀⣤⣀⣀⣀⣀⣀⣀⣤⠀⣿⠀⠀⠀⠀⢀⣠⣴⣾⣿\n");
-    printf("⣿⣿⣿⣿⣿⣦⡀⠀⠀⣿⠀⠈⢻⡟⠛⠛⢻⡟⠁⠀⣿⠀⠀⢀⣴⣿⣿⣿⣿⣿\n");
-    printf("⣿⣿⣿⣿⣿⣿⣿⣆⠀⢻⣤⣀⡀⠁⠀⠀⠈⠀⣀⣤⡟⠀⣰⣿⣿⣿⣿⣿⣿⣿\n");
-    printf("⣿⣿⣿⣿⣿⣿⣿⣿⣤⣤⣬⣭⣿⣿⣿⣿⣿⣿⣭⣥⣤⣤⣿⣿⣿⣿⣿⣿⣿⣿\n\n");
     
+    printf("\e[0;47;40m┠──────────────────────────────────────────────────────────────────────────────────────────────────────────────┨\033[0;0m\n");
+	printf("\e[0;47;40m┃                                                                                                              ┃\033[0;0m\n");
+    printf("\e[0;47;40m┃                                  \e[0;36;40m          !!!!3X4 DO TIO VLAD!!!\e[0;47;40m                                            ┃\033[0;0m\n");
+	printf("\e[0;47;40m┃                                                                                                              ┃\033[0;0m\n");
+	printf("\e[0;47;40m┃                                        ⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠿⠿⠟⠛⠛⠛⠛⠛⠿⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿                                        ┃\033[0;0m\n");
+	printf("\e[0;47;40m┃                                        ⣿⣿⣿⣿⣿⣿⡿⠋⣡⣤⣶⣶⣶⣶⣆⣰⣶⣶⣶⣶⣤⣌⠛⢿⣿⣿⣿⣿⣿⣿                                        ┃\033[0;0m\n");
+	printf("\e[0;47;40m┃                                        ⣿⣿⣿⣿⣿⣿⠁⠈⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⠁⠈⣿⣿⣿⣿⣿⣿                                        ┃\033[0;0m\n");
+	printf("\e[0;47;40m┃                                        ⣿⣿⣿⣿⣿⡿⠀⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⢿⣿⣿⣿⣿⣿                                        ┃\033[0;0m\n");
+	printf("\e[0;47;40m┃                                        ⣿⣿⣿⣿⣿⡇⠀⣿⡿⠋⠉⠉⠙⠻⠿⠿⠟⠋⠉⠉⠙⢿⣿⠀⢸⣿⣿⣿⣿⣿                                        ┃\033[0;0m\n");
+	printf("\e[0;47;40m┃                                        ⣿⣿⣿⡟⠻⢿⣴⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣦⡿⠟⢻⣿⣿⣿                                        ┃\033[0;0m\n");
+	printf("\e[0;47;40m┃                                        ⣿⣿⣿⣷⠀⠀⣿⠁⢀⣴⣷⣄⠀⠀⠀⠀⠀⠀⣠⣾⣦⡀⠈⣿⠀⠀⣾⣿⣿⣿                                        ┃\033[0;0m\n");
+	printf("\e[0;47;40m┃                                        ⣿⣿⣿⣿⡀⠀⣿⠀⠙⢋⣤⣿⣷⣄⠀⠀⣠⣾⣿⣤⡙⠋⠀⣿⠀⢀⣿⣿⣿⣿                                        ┃\033[0;0m\n");
+	printf("\e[0;47;40m┃                                        ⣿⣿⣿⣿⣷⣄⣿⠀⠰⠿⠇⠀⠿⠿⠁⠈⠿⠿⠀⠸⠿⠆⠀⣿⣠⣾⣿⣿⣿⣿                                        ┃\033[0;0m\n");
+	printf("\e[0;47;40m┃                                        ⣿⣿⣿⣿⣿⣿⡿⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⢿⣿⣿⣿⣿⣿⣿                                        ┃\033[0;0m\n");
+	printf("\e[0;47;40m┃                                        ⣿⣿⡿⠟⠋⠁⠀⠈⠻⣦⠀⠀⠀⠻⢶⡶⠟⠀⠀⠀⣴⠟⠁⠀⠈⠙⠻⢿⣿⣿                                        ┃\033[0;0m\n");
+	printf("\e[0;47;40m┃                                        ⣿⣷⣦⣄⡀⠀⠀⠀⠀⣿⠀⣤⣀⣀⣀⣀⣀⣀⣤⠀⣿⠀⠀⠀⠀⢀⣠⣴⣾⣿                                        ┃\033[0;0m\n");
+    printf("\e[0;47;40m┃                                        ⣿⣿⣿⣿⣿⣦⡀⠀⠀⣿⠀⠈⢻⡟⠛⠛⢻⡟⠁⠀⣿⠀⠀⢀⣴⣿⣿⣿⣿⣿                                        ┃\033[0;0m\n");
+    printf("\e[0;47;40m┃                                        ⣿⣿⣿⣿⣿⣿⣿⣆⠀⢻⣤⣀⡀⠁⠀⠀⠈⠀⣀⣤⡟⠀⣰⣿⣿⣿⣿⣿⣿⣿                                        ┃\033[0;0m\n");
+    printf("\e[0;47;40m┃                                        ⣿⣿⣿⣿⣿⣿⣿⣿⣤⣤⣬⣭⣿⣿⣿⣿⣿⣿⣭⣥⣤⣤⣿⣿⣿⣿⣿⣿⣿⣿                                        ┃\033[0;0m\n");
+	printf("\e[0;47;40m┃                                                                                                              ┃\033[0;0m\n");
+	printf("\e[0;47;40m┃                                                                                                              ┃\033[0;0m\n");
+	printf("\e[0;47;40m┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛\033[0;0m\n");
+
+    printf("\n\n");    
 
     //Inicializa & Cria variáveis que serão usadas no decorrer do programa
     Insere(caminho, qnt_vertices);
@@ -231,7 +239,7 @@ int main(int argc, char *argv[]){
             j++;
         }
     }
-    
+
     if(j == qnt_vertices){
         printf("Ao que parece vladimir mora em um local onde nao hah um sistema rodoviario\n");
     }else{
@@ -250,10 +258,24 @@ int main(int argc, char *argv[]){
         keep = caminho[destino][destino]/24 + keep;
     }
     if(keep == 4166){
-        printf("vladimir é pobre, a cidade dele não tem sistema rodoviario\n");    
+        printf("vladimir é isolado, logo nao consegue chegar ao seu destino\n");    
     }
     else{
-        printf("vladimir gastaria %d litros de sangue\n", keep);
+        printf("VLADIMIR GASTARIA %d LITROS DE SANGUE\n", keep);
+        for(keep; keep>0;keep--){
+                             
+            printf("    )_(   \n");                                         
+            printf("    | |   \n");                     
+            printf("  .-'-'-. \n");     
+            printf(" /-::_..- \n");    
+            printf(" )_%d   _(\n", keep);   
+            printf(" |;::    |\n");   
+            printf(" |;::    |\n");   
+            printf(" |;::    |\n");   
+            printf(" |;::-.._|\n");   
+            printf(" `-.._..-'\n");   
+
+        }
     }
     
     
