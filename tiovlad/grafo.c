@@ -43,7 +43,7 @@ void Converte(int **grafo, int vertex_qnt, int fator_previne, int origem, int de
                 grafo[i][j] = LIMITE;
             }
             if(i == j){
-                grafo[i][j] = LIMITE;
+                grafo[i][j] = 0;
             }
         }
         

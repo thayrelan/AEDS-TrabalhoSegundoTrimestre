@@ -68,7 +68,9 @@ void MenorCaminho(int qnt_vertices, int ** sistema_rodoviario, int**caminho, int
                }
                //Marca o vertice como visitado
                visitados[origem] = 1;
+               
             }
+            
         }
         //Determina o próximo vertice a ter seus adjacentes visitados
         menor = MenorAresta(caminho, visitados, qnt_vertices, i);
@@ -76,7 +78,7 @@ void MenorCaminho(int qnt_vertices, int ** sistema_rodoviario, int**caminho, int
 
         //Se o peso real do vértice alcancado for maior que 12, isso significa que vladimir terá de esperar
         //na estação
-        if(peso >= 12 && peso <24){
+        /*if(peso >= 12 && peso <24){
             peso = 24;
         }
         else if(peso >= 24){
@@ -88,7 +90,7 @@ void MenorCaminho(int qnt_vertices, int ** sistema_rodoviario, int**caminho, int
             else{
                 peso = 24*l+keep;
             }
-        }
+        }*/
         origem = menor.vertice;      
     }
 }
@@ -114,11 +116,6 @@ void GrafoTeste(int qnt_vertices, int**sistema_rodoviario){
     sistema_rodoviario[2][3] = 8;
     sistema_rodoviario[3][2] = 8;
     sistema_rodoviario[3][1] = 1;
-
-    sistema_rodoviario[1][4] = 3;
-    sistema_rodoviario[4][1] = 3;
-    sistema_rodoviario[3][4] = 8;
-    sistema_rodoviario[4][3] = 8;
 
 }
 

@@ -5,9 +5,9 @@
 #include "grafo.h"
 #include "vladimir.h"
 
-#define TOTAL 5
+#define TOTAL 8
 #define COMECO 0
-#define FIM 4
+#define FIM 5
 
 
 //main
@@ -50,14 +50,15 @@ int main(int argc, char *argv[]){
     sistema_rodoviario = GrafoCria(qnt_vertices, qnt_vertices);
     GrafoConstroi(sistema_rodoviario, qnt_vertices);
     Converte(sistema_rodoviario, qnt_vertices, -1, origem, destino, 2);
+    //GrafoTeste(qnt_vertices, sistema_rodoviario);
 
 
     //Imprime Grafo Contruído
-    printf("+---------------------------------------------+\n");
-    printf("|          GRAFO ALEATORIA GERADA             |\n");
-    printf("+---------------------------------------------+\n");    
+    printf("+-----------------------------------------------------+\n");
+    printf("|                         GRAFO                       |\n");
+    printf("+-----------------------------------------------------+\n");    
     GrafoImprime(sistema_rodoviario, qnt_vertices, qnt_vertices);
-    printf("+---------------------------------------------+\n");  
+    printf("+-----------------------------------------------------+\n");  
     printf("\n\n");
     
     /*Verifica se não há nenhuma conexão da cidade origem para qualquer outra*/
@@ -72,20 +73,20 @@ int main(int argc, char *argv[]){
     }else{
         //Descobre o menor caminho de um ponto ao outro
         MenorCaminho(qnt_vertices, sistema_rodoviario, caminho, visitados, origem);
-        printf("+---------------------------------------------+\n");
-        printf("|           MENOR CAMINHO DJIKISTRA           |\n");
-        printf("+---------------------------------------------+\n"); 
+        printf("+-------------------------------------+\n");
+        printf("|              DJIKISTRA              |\n");
+        printf("+-------------------------------------+\n");   
         GrafoImprime(caminho, qnt_vertices, qnt_vertices);
-        printf("+---------------------------------------------+\n"); 
+        printf("+-------------------------------------+\n");  
         printf("\n");
     }
 
 
-    if(j != qnt_vertices){
-        caminho[destino][destino] = caminho[destino][destino]-18;
+    if(j != qnt_vertices){  
+        caminho[qnt_vertices-1][destino] = caminho[qnt_vertices-1][destino]-18;
         keep++;
-        if(caminho[destino][destino]>24){
-             keep = caminho[destino][destino]/24 + keep;
+        if(caminho[qnt_vertices-1][destino]>24){
+             keep = caminho[qnt_vertices-1][destino]/24 + keep;
         }
         if(keep == 4166){
           printf("A CIDADE DESTINO NAO PODE SER ALCANCADA (SADGE)\n");    
