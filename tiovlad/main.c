@@ -54,11 +54,11 @@ int main(int argc, char *argv[]){
 
 
     //Imprime Grafo Contruído
-    printf("+-----------------------------------------------------+\n");
-    printf("|                         GRAFO                       |\n");
-    printf("+-----------------------------------------------------+\n");    
+    printf("+---------------------------------------------------------------------+\n");
+    printf("|                               GRAFO                                 |\n");
+    printf("+---------------------------------------------------------------------+\n");    
     GrafoImprime(sistema_rodoviario, qnt_vertices, qnt_vertices);
-    printf("+-----------------------------------------------------+\n");  
+    printf("+---------------------------------------------------------------------+\n");  
     printf("\n\n");
     
     /*Verifica se não há nenhuma conexão da cidade origem para qualquer outra*/
@@ -73,11 +73,11 @@ int main(int argc, char *argv[]){
     }else{
         //Descobre o menor caminho de um ponto ao outro
         MenorCaminho(qnt_vertices, sistema_rodoviario, caminho, visitados, origem);
-        printf("+-------------------------------------+\n");
-        printf("|              DJIKISTRA              |\n");
-        printf("+-------------------------------------+\n");   
+        printf("+---------------------------------------------------------------------+\n");
+        printf("|                            DJIKSTRA                                 |\n");
+        printf("+---------------------------------------------------------------------+\n"); 
         GrafoImprime(caminho, qnt_vertices, qnt_vertices);
-        printf("+-------------------------------------+\n");  
+        printf("+---------------------------------------------------------------------+\n"); 
         printf("\n");
     }
 
